@@ -18,7 +18,7 @@ class DeleteUser extends Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:5000/users/")
+      .get("/users/")
       .then(response => {
         this.setState({ users: response.data });
       })
@@ -28,7 +28,7 @@ class DeleteUser extends Component {
   }
 
   deleteUser = id => {
-    axios.delete(`http://localhost:5000/users/${id}`).then(response => {
+    axios.delete(`/users/${id}`).then(response => {
       console.log(response.data);
     });
 

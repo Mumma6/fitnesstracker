@@ -21,7 +21,7 @@ class CreateExercise extends Component {
 
   async componentDidMount() {
     try {
-      const url = "http://localhost:5000/users/";
+      const url = "/users/";
       let response = await axios.get(url);
       let data = response.data;
       if (data.length > 0) {
@@ -59,7 +59,7 @@ class CreateExercise extends Component {
     console.log(exercise);
 
     axios
-      .post("http://localhost:5000/exercises/add", exercise)
+      .post("/exercises/add", exercise)
       .then(res => console.log(res.data));
   };
 

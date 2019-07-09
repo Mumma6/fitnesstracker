@@ -18,7 +18,7 @@ class EditExercise extends Component {
 
   async componentDidMount() {
     try {
-      const url = `http://localhost:5000/exercises/${
+      const url = `/exercises/${
         this.props.match.params.id
       }`;
       let response = await axios.get(url);
@@ -36,7 +36,7 @@ class EditExercise extends Component {
     }
 
     try {
-      const url = "http://localhost:5000/users/";
+      const url = "/users/";
       let response = await axios.get(url);
       let data = response.data;
       if (data.length > 0) {
@@ -67,7 +67,7 @@ class EditExercise extends Component {
     console.log(exercise);
 
     axios
-      .post(`http://localhost:5000/exercises/update/${this.props.match.params.id}`, exercise)
+      .post(`/exercises/update/${this.props.match.params.id}`, exercise)
       .then(res => console.log(res.data));
   };
 

@@ -25,7 +25,7 @@ class NavBar extends Component {
       : "navbar-toggler navbar-toggler-right ml-auto";
 
     return (
-      <nav style={{paddingLeft: "10rem", paddingRight: "10rem"}} className="navbar navbar-dark bg-dark navbar-expand-lg">
+      <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
         <Link to="/" className="navbar-brand">
           Fitness tracker
         </Link>
